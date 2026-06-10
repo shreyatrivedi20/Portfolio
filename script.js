@@ -1,217 +1,99 @@
-/* =========================
-   TYPING ANIMATION
-========================= */
+// ============================================
+//  SHREYA TRIVEDI — PORTFOLIO SCRIPTS
+// ============================================
 
-const typingElement = document.getElementById("typing");
+// SCROLL REVEAL — watches all .reveal / .reveal-left / .reveal-right elements
+// and adds .visible when they enter the viewport
 
-const roles = [
-    "Frontend Developer",
-    "Problem Solver",
-    "React Enthusiast",
-    "Software Engineer"
-];
-
-let roleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-function typeEffect() {
-
-    const currentRole = roles[roleIndex];
-
-    if (!isDeleting) {
-        typingElement.textContent =
-            currentRole.substring(0, charIndex + 1);
-
-        charIndex++;
-
-        if (charIndex === currentRole.length) {
-            isDeleting = true;
-            setTimeout(typeEffect, 1500);
-            return;
-        }
-    }
-    else {
-
-        typingElement.textContent =
-            currentRole.substring(0, charIndex - 1);
-
-        charIndex--;
-
-        if (charIndex === 0) {
-            isDeleting = false;
-            roleIndex++;
-
-            if (roleIndex === roles.length) {
-                roleIndex = 0;
-            }
-        }
-    }
-
-    setTimeout(
-        typeEffect,
-        isDeleting ? 50 : 100
-    );
-}
-
-typeEffect();
-
-/* =========================
-   THEME TOGGLE
-========================= */
-
-const themeBtn =
-    document.getElementById("themeToggle");
-
-themeBtn.addEventListener("click", () => {
-
-    document.body.classList.toggle("light-mode");
-
-    const icon =
-        themeBtn.querySelector("i");
-
-    if (
-        document.body.classList.contains(
-            "light-mode"
-        )
-    ) {
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-    }
-    else {
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-    }
-
-});
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-const revealElements =
-    document.querySelectorAll(
-        ".section, .project-card, .info-card, .skill-card"
-    );
-
-function revealOnScroll() {
-
-    revealElements.forEach((element) => {
-
-        const windowHeight =
-            window.innerHeight;
-
-        const elementTop =
-            element.getBoundingClientRect().top;
-
-        const revealPoint = 120;
-
-        if (
-            elementTop <
-            windowHeight - revealPoint
-        ) {
-            element.classList.add("show");
-        }
-
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
     });
-
-}
-
-window.addEventListener(
-    "scroll",
-    revealOnScroll
+  },
+  {
+    threshold: 0.12,
+    rootMargin: '0px 0px -40px 0px',
+  }
 );
 
-revealOnScroll();
+document
+  .querySelectorAll('.reveal, .reveal-left, .reveal-right')
+  .forEach((el) => revealObserver.observe(el));
 
-/* =========================
-   NAVBAR SHADOW
-========================= */
 
-const navbar =
-    document.querySelector(".navbar");
+// MOBILE NAV TOGGLE
 
-window.addEventListener("scroll", () => {
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks  = document.querySelector('.nav-links');
 
-    if (window.scrollY > 50) {
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
 
-        navbar.style.boxShadow =
-            "0 4px 20px rgba(0,0,0,0.25)";
-
-    } else {
-
-        navbar.style.boxShadow = "none";
-
-    }
-
-});
-
-/* =========================
-   ACTIVE NAV LINK
-========================= */
-
-const sections =
-    document.querySelectorAll("section");
-
-const navLinks =
-    document.querySelectorAll(
-        ".nav-links a"
-    );
-
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach((section) => {
-
-        const sectionTop =
-            section.offsetTop;
-
-        if (
-            scrollY >=
-            sectionTop - 150
-        ) {
-            current =
-                section.getAttribute("id");
-        }
-
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
     });
+  });
+}
 
-    navLinks.forEach((link) => {
 
-        link.classList.remove("active");
+// ACTIVE NAV LINK — highlights the current section in the nav
+const sections = document.querySelectorAll('section[id]');
+const navItems = document.querySelectorAll('.nav-links a');
 
-        if (
-            link.getAttribute("href") ===
-            `#${current}`
-        ) {
-            link.classList.add("active");
-        }
-
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navItems.forEach((link) => {
+          link.style.color =
+            link.getAttribute('href') === `#${id}`
+              ? 'var(--text)'
+              : '';
+        });
+      }
     });
-
-});
-
-/* =========================
-   CONTACT FORM
-========================= */
-
-const form =
-    document.querySelector(
-        ".contact-form"
-    );
-
-form.addEventListener(
-    "submit",
-    function (e) {
-
-        e.preventDefault();
-
-        alert(
-            "Demo Portfolio: Form submitted successfully!"
-        );
-
-        form.reset();
-
-    }
+  },
+  { threshold: 0.4 }
 );
+
+sections.forEach((sec) => sectionObserver.observe(sec));
+
+
+// CONTACT FORM — basic submit feedback
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = contactForm.querySelector('button[type="submit"]');
+    btn.textContent = 'Message Sent ✓';
+    btn.style.opacity = '0.7';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = 'Send Message';
+      btn.style.opacity = '';
+      btn.disabled = false;
+      contactForm.reset();
+    }, 3000);
+  });
+}
+const themeToggle = document.getElementById('themeToggle');
+
+themeToggle.addEventListener('click', () => {
+  const html = document.documentElement;
+  if (html.getAttribute('data-theme') === 'dark') {
+    html.setAttribute('data-theme', 'light');
+    themeToggle.textContent = '🌙';
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    themeToggle.textContent = '☀️';
+  }
+});

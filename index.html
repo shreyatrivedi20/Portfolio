@@ -1,399 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shreya Trivedi | Portfolio</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreya Trivedi | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">ST</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+<button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+  </nav>
 
-    <header class="navbar">
-
-        <div class="logo">
-            ST
-        </div>
-
-        <nav>
-
-            <ul class="nav-links">
-
-                <li><a href="#about">About</a></li>
-
-                <li><a href="#skills">Skills</a></li>
-
-                <li><a href="#projects">Projects</a></li>
-
-                <li><a href="#timeline">Journey</a></li>
-
-                <li><a href="#contact">Contact</a></li>
-
-            </ul>
-
-        </nav>
-
-        <button id="themeToggle">
-            <i class="fa-solid fa-moon"></i>
-        </button>
-
-    </header>
-
-    <!-- ================= HERO ================= -->
-
-    <!-- ================= HERO ================= -->
-
-<section class="hero">
-
+  <!-- HERO -->
+  <section class="hero" id="about">
     <div class="hero-content">
-
-        <div class="hero-badge">
-            AVAILABLE FOR INTERNSHIPS
-        </div>
-
-        <h1>
-            SHREYA<br>
-            TRIVEDI
+      <div class="hero-text">
+        <div class="hero-badge reveal">Available for Internships</div>
+        <h1 class="hero-name reveal delay-1">
+          SHREYA<br><span>TRIVEDI</span>
         </h1>
-
-        <h2>
-            <span id="typing"></span>
-        </h2>
-
-        <p class="hero-description">
-
-           I design and develop modern web applications that combine
-performance, functionality, and great user experience.
-Currently focused on full-stack development and solving
-challenging engineering problems.
-
+        <p class="hero-sub reveal delay-2">
+          I design and develop modern web applications that combine performance,
+          functionality, and great user experience. Currently focused on full-stack
+          development and solving challenging engineering problems.
         </p>
-
-        <div class="hero-buttons">
-
-            <a href="assets/resume.pdf"
-               target="_blank"
-               class="btn primary-btn">
-
-                Resume
-
-            </a>
-
-            <a href="#contact"
-               class="btn secondary-btn">
-
-                Contact Me
-
-            </a>
-
+        <div class="hero-btns reveal delay-3">
+          <a href="assets/resume.pdf" class="btn-primary">Resume</a>
+          <a href="#contact" class="btn-outline">Contact Me</a>
         </div>
-
-        <div class="social-icons">
-
-            <a href="https://github.com/shreyatrivedi20">
-                <i class="fab fa-github"></i>
-            </a>
-
-            <a href="https://www.linkedin.com/feed/">
-                <i class="fab fa-linkedin"></i>
-            </a>
-
+        <div class="hero-socials reveal delay-4">
+         <a href="https://github.com/shreyatrivedi20" target="_blank" class="social-link">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+  GitHub
+</a>
+<a href="https://www.linkedin.com/in/shreya-it24/" target="_blank" class="social-link">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  LinkedIn
+</a>
         </div>
-
-        <div class="hero-stats">
-
-            <div class="stat-card">
-                <h3>150+</h3>
-                <p>DSA Problems</p>
-            </div>
-
-            <div class="stat-card">
-                <h3>2+</h3>
-                <p>Years Learning</p>
-            </div>
-
+        <div class="hero-stats reveal delay-4">
+          <div class="stat-item">
+            <div class="stat-num">150+</div>
+            <div class="stat-label">DSA Problems</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">2+</div>
+            <div class="stat-label">Years Learning</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">4</div>
+            <div class="stat-label">Certifications</div>
+          </div>
         </div>
-
+      </div>
+      <div class="hero-image reveal-right">
+        <img src="assets/profile.jpeg" alt="Shreya Trivedi" />
+      </div>
     </div>
+  </section>
 
-    <div class="hero-image">
-
-        <img src="assets/profile.jpeg"
-             alt="Profile Image">
-
+  <!-- SKILLS -->
+  <section id="skills" class="section-alt">
+    <div class="container">
+      <p class="section-label reveal">What I work with</p>
+      <h2 class="section-heading reveal delay-1">Skills</h2>
+      <div class="divider reveal delay-2"></div>
+      <div class="skills-grid">
+        <span class="skill-chip reveal delay-1">HTML</span>
+        <span class="skill-chip reveal delay-2">CSS</span>
+        <span class="skill-chip reveal delay-1">JavaScript</span>
+        <span class="skill-chip reveal delay-2">React</span>
+        <span class="skill-chip reveal delay-3">Java</span>
+        <span class="skill-chip reveal delay-1">Python</span>
+        <span class="skill-chip reveal delay-2">MySQL</span>
+        <span class="skill-chip reveal delay-3">Git</span>
+        <span class="skill-chip reveal delay-1">GitHub</span>
+        <span class="skill-chip reveal delay-2">DSA</span>
+      </div>
     </div>
+  </section>
 
-</section>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <p class="section-label reveal">What I've built</p>
+      <h2 class="section-heading reveal delay-1">Featured Projects</h2>
+      <div class="divider reveal delay-2"></div>
+      <div class="projects-grid">
 
-    <!-- ================= SKILLS ================= -->
-
-    <section id="skills" class="section">
-
-        <h2 class="section-title">
-            Skills
-        </h2>
-
-        <div class="skills-grid">
-
-            <div class="skill-card">HTML</div>
-            <div class="skill-card">CSS</div>
-            <div class="skill-card">JavaScript</div>
-            <div class="skill-card">React</div>
-            <div class="skill-card">Java</div>
-            <div class="skill-card">Python</div>
-            <div class="skill-card">MySQL</div>
-            <div class="skill-card">Git</div>
-            <div class="skill-card">GitHub</div>
-            <div class="skill-card">DSA</div>
-
+        <div class="project-card reveal-left delay-1">
+          <img src="assets/project.png" alt="UPSC News Hub" class="project-img" />
+          <div class="project-title">UPSC News Hub</div>
+          <p class="project-desc">A platform which makes civil services preparations easier by fetching and updating all news articles with summarization and audio tools.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">React</span>
+            <span class="tag">Flask</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="upsc-news-hub.vercel.app" class="project-link">Live Demo</a>
+            <a href="https://github.com/shreyatrivedi20/UPSC--news-hub" class="project-link">GitHub</a>
+          </div>
         </div>
 
-    </section>
-
-    <!-- ================= PROJECTS ================= -->
-
-    <section id="projects" class="section">
-
-        <h2 class="section-title">
-            Featured Projects
-        </h2>
-
-        <div class="projects-grid">
-
-            <div class="project-card">
-
-                <img src="assets/project.png" alt="Project">
-
-                <div class="project-content">
-
-                    <h3>UPSC -News Hub</h3>
-
-                    <p>
-
-                        A platform which makes civil services preprations easier by fetching and updating all news articles with summarization and audio tools.
-
-                    </p>
-
-                    <div class="tech-stack">
-                        <span>Python</span>
-                        <span>React</span>
-                        <span>Flask</span>
-                        <span>javascipt</span>
-
-                    </div>
-
-                    <div class="project-links">
-
-                        <a href="upsc-news-hub.vercel.app">Live Demo</a>
-
-                        <a href="https://github.com/shreyatrivedi20/UPSC--news-hub">GitHub</a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="project-card">
-
-                <img src="assets/project2.jpeg" alt="Project">
-
-                <div class="project-content">
-
-                    <h3>WanderWise</h3>
-
-                    <p>
-
-                        Help making trips planned and within budget , give AI powered suggestions and analysis of expenses during trip.
-
-                    </p>
-
-                    <div class="tech-stack">
-
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                        <span>React</span>
-
-                    </div>
-
-                    <div class="project-links">
-
-                        <a href="#">Live Demo</a>
-
-                        <a href="#">GitHub</a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="project-card reveal-right delay-2">
+          <img src="assets/project2.jpeg" alt="WanderWise" class="project-img" />
+          <div class="project-title">WanderWise</div>
+          <p class="project-desc">Help making trips planned and within budget — gives AI powered suggestions and analysis of expenses during trip.</p>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">React</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">Live Demo</a>
+            <a href="#" class="project-link">GitHub</a>
+          </div>
         </div>
 
-    </section>
-
-    <!-- ================= TIMELINE ================= -->
-
-    <section id="timeline" class="section">
-
-        <h2 class="section-title">
-            My Journey
-        </h2>
-
-        <div class="timeline">
-
-            <div class="timeline-item">
-                <h3>2024</h3>
-                <p>Started Btech -Information Technology Degree</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>2025</h3>
-                <p>Learned Java & Data Structures</p>
-            </div>
-
-            <div class="timeline-item">
-                <h3>2026</h3>
-                <p>Building Full Stack Applications</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- ================= CODING PROFILES ================= -->
-
-    <section class="section">
-
-        <h2 class="section-title">
-            Coding Profiles
-        </h2>
-
-        <div class="profiles">
-
-            <a href="https://www.linkedin.com/in/shreya-it24/" class="profile-card">
-            <i class="fab fa-linkedin"></i>
-            <span>LinkedIn</span>
-        </a>
-
-        <a href="https://github.com/shreyatrivedi20" class="profile-card">
-            <i class="fab fa-github"></i>
-            <span>GitHub</span>
-        </a>
-
-        <a href="https://leetcode.com/u/S_hreya_2/" class="profile-card">
-            <i class="fa-solid fa-code"></i>
-            <span>LeetCode</span>
-        </a>
-           
-
-        </div>
-
-    </section>
-
-    <!-- ================= CONTACT ================= -->
-
-    <section id="contact" class="section">
-
-    <h2 class="section-title">
-        Let's Connect
-    </h2>
-
-    <div class="contact-container">
-
-        <!-- LEFT SIDE -->
-
-        <div class="contact-info">
-
-            <h3>Get In Touch</h3>
-
-            <p>
-                I'm always open to discussing new projects,
-                internship opportunities and interesting ideas.
-            </p>
-
-            <div class="contact-links">
-
-                <a href="#">
-                    <i class="fa-solid fa-envelope"></i>
-                    trivedishreya317@gmail.com
-                </a>
-
-                <a href="https://www.linkedin.com/in/shreya-it24/">
-                    <i class="fab fa-linkedin"></i>
-                    LinkedIn
-                </a>
-                <a href="https://maps.app.goo.gl/8x3CzLVTrQb3iqQ78"><i class="fa-solid fa-location-dot"></i>Location</a>
-                </div>
-                
-
-            
-        </div>
-        <!-- RIGHT SIDE -->
-
-        <div class="contact-form-container">
-
-            <h3>Send Me A Message</h3>
-
-            <form class="contact-form">
-
-                <input
-                    type="text"
-                    placeholder="Your Name"
-                >
-
-                <input
-                    type="email"
-                    placeholder="Your Email"
-                >
-
-
-                <textarea
-                    rows="6"
-                    placeholder="Your Message">
-                </textarea>
-
-                <button
-                    type="submit"
-                    class="btn primary-btn">
-
-                    Send Message
-
-                </button>
-
-            </form>
-
-        </div>
-
+      </div>
     </div>
+  </section>
 
-</section>
+  <!-- CERTIFICATIONS -->
+  <section id="certifications" class="section-alt">
+    <div class="container">
+      <p class="section-label reveal">What I've earned</p>
+      <h2 class="section-heading reveal delay-1">Certifications</h2>
+      <div class="divider reveal delay-2"></div>
+      <div class="certs-grid">
 
-    <!-- ================= FOOTER ================= -->
+        <div class="cert-card reveal delay-1">
+          <div class="cert-icon">🤖</div>
+          <div class="cert-title">Introduction to Modern AI</div>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+          <div class="cert-date">June 2026</div>
+          <span class="cert-badge">Verified</span>
+        </div>
 
-    <footer>
+        <div class="cert-card reveal delay-2">
+          <div class="cert-icon">🧠</div>
+          <div class="cert-title">Machine Learning Foundations</div>
+          <div class="cert-issuer">AWS Academy</div>
+          <div class="cert-date">May 2026</div>
+          <span class="cert-badge">Verified</span>
+        </div>
 
-        <p>
-            © 2026 Shreya Trivedi. All Rights Reserved.
-        </p>
+        <div class="cert-card reveal delay-3">
+          <div class="cert-icon">☁️</div>
+          <div class="cert-title">AWS Academy Graduate — Cloud Foundations</div>
+          <div class="cert-issuer">AWS Academy</div>
+          <div class="cert-date">February 2026</div>
+          <span class="cert-badge">Verified</span>
+        </div>
 
-    </footer>
+        <div class="cert-card reveal delay-4">
+          <div class="cert-icon">📊</div>
+          <div class="cert-title">Data Analytics Essentials</div>
+          <div class="cert-issuer">Cisco Networking Academy</div>
+          <div class="cert-date">June 2025</div>
+          <span class="cert-badge">Verified</span>
+        </div>
 
-    <script src="script.js"></script>
+      </div>
+    </div>
+  </section>
 
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="container">
+      <p class="section-label reveal">My background</p>
+      <h2 class="section-heading reveal delay-1">Education</h2>
+      <div class="divider reveal delay-2"></div>
+      <div class="edu-card reveal delay-2">
+        <div class="edu-icon">🏛️</div>
+        <div class="edu-info">
+          <div class="edu-degree">Bachelor of Technology — Information Technology</div>
+          <div class="edu-school">G.L. Bajaj Institute of Technology and Management, Greater Noida</div>
+          <div class="edu-year">2024 – 2028 &nbsp;·&nbsp; Currently Enrolled</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY -->
+  <section id="journey" class="section-alt">
+    <div class="container">
+      <p class="section-label reveal">My path</p>
+      <h2 class="section-heading reveal delay-1">My Journey</h2>
+      <div class="divider reveal delay-2"></div>
+      <div class="timeline">
+        <div class="timeline-item reveal delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2024</div>
+          <div class="timeline-content">Started B.Tech — Information Technology</div>
+          <div class="timeline-detail">Enrolled at G.L. Bajaj Institute of Technology and Management</div>
+        </div>
+        <div class="timeline-item reveal delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2025</div>
+          <div class="timeline-content">Learned Java & Data Structures</div>
+          <div class="timeline-detail">Solved 150+ DSA problems, built strong algorithmic thinking</div>
+        </div>
+        <div class="timeline-item reveal delay-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2026</div>
+          <div class="timeline-content">Building Full Stack Applications</div>
+          <div class="timeline-detail">Working on real-world projects using React, Python & Flask</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CODING PROFILES -->
+  <section id="profiles">
+    <div class="container">
+      <p class="section-label reveal">Find me on</p>
+      <h2 class="section-heading reveal delay-1">Coding Profiles</h2>
+      <div class="divider reveal delay-2"></div>
+      <div class="profiles-row">
+        <a href="https://www.linkedin.com/in/shreya-it24/" target="_blank" class="profile-btn reveal delay-1">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  LinkedIn
+</a>
+<a href="https://github.com/shreyatrivedi20" target="_blank" class="profile-btn reveal delay-2">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+  GitHub
+</a>
+<a href="https://leetcode.com/u/S_hreya_2/" target="_blank" class="profile-btn reveal delay-3">
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H19.8a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+  LeetCode
+</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section-alt">
+    <div class="container">
+      <p class="section-label reveal">Let's talk</p>
+      <h2 class="section-heading reveal delay-1">Let's Connect</h2>
+      <div class="divider reveal delay-2"></div>
+      <div class="contact-grid">
+        <div class="contact-info reveal-left delay-1">
+          <h3>Get In Touch</h3>
+          <p>I'm always open to discussing new projects, internship opportunities and interesting ideas.</p>
+          <div class="contact-links">
+            <a href="mailto:trivedishreya317@gmail.com" class="contact-link">
+              <div class="contact-link-icon">✉️</div>
+              trivedishreya317@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/shreya-it24/" target="_blank" class="contact-link">
+              <div class="contact-link-icon">💼</div>
+              LinkedIn Profile
+            </a>
+            <a href="https://maps.app.goo.gl/8x3CzLVTrQb3iqQ78" target="_blank" class="contact-link">
+              <div class="contact-link-icon">📍</div>
+              Greater Noida, India
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal-right delay-2">
+          <form class="contact-form">
+            <input type="text" placeholder="Your Name" />
+            <input type="email" placeholder="Your Email" />
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Shreya Trivedi. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
